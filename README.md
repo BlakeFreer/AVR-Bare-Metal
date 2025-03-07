@@ -45,7 +45,7 @@ int main(void) {
 
 ## Configure VS Code
 
-Install the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+Install the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Disable any other language servers (like clangd) for this workspace.
 
 1. From the Command Palette (CTRL + SHIFT + P), run `C/C++: Edit Configurations (UI)`.
 2. Set the "Compiler Path" to your avr-gcc path (run `which avr-gcc` to find yours).
