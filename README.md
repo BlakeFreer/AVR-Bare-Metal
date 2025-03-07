@@ -102,12 +102,6 @@ usbipd detach --busid 6-4
 
 Roughly in order of increasing difficulty.
 
-You will need to continuously reference the ATmega328P datasheet when programming bare metal.
-
-<https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
-
-To use a peripheral, find its section in the datasheet, read the overview, then determine which registers need to be modified. Notice that each register has a default value, so if you like the default then you don't need to explicitly set it in code.
-
 1. Blink an LED every 1 second.
    1. Start with the `_delay_ms()` function from `util/delay.h`, then write your own delay function using a hardware timer. Verify the exact timing with an oscilloscope. You should be able to get exactly 1000 ms delay, not 999 or 1001.
 2. Turn on an LED with a button.
@@ -116,3 +110,9 @@ To use a peripheral, find its section in the datasheet, read the overview, then 
 5. Control an LED's brightness using a potentiometer as an analog input.
 6. Send Serial messages to your computer. The Arduino IDE has a Serial Monitor window and there's probably a VS Code extension for one.
    1. There are Linux CLI tools for viewing Serial messages, see <https://arduino.stackexchange.com/questions/79058/access-serial-monitor-on-linux-cli-using-arduino-cli>.
+
+You will need to continuously reference the ATmega328P datasheet when programming bare metal.
+
+<https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
+
+To use a peripheral, find its section in the datasheet, read the overview, then determine which registers need to be modified. Notice that each register has a default value, so if you like the default then you don't need to explicitly set it in code.
