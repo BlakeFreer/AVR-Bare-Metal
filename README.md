@@ -82,7 +82,9 @@ C:\>usbipd bind --busid 6-4
 C:\>usbipd attach --busid 6-4 --wsl
 ```
 
-The Arduino is now connected to WSL and cannot be accessed by Windows. To bring it back, run this from Windows:
+The Arduino is now connected to WSL and cannot be accessed by Windows. You can run `make burn <FILE>.hex` to flash code to the Arduino.
+
+To bring the Arduino back to Windows, run (in Windows Command Prompt)
 
 ```bash
 usbipd detach --busid 6-4
