@@ -14,7 +14,7 @@ DUDE_DEVICE = -p m328p
 PORT = -P /dev/ttyACM0
 BAUD = -b115200
 
-.PHONY: build burn clean
+.PHONY: burn clean
 
 burn: $(HEX_FILE)
 	sudo avrdude -C /etc/avrdude.conf -F -V $(PROGRAMMER) $(DUDE_DEVICE) $(PORT) $(BAUD) -D -Uflash:w:$<:i
